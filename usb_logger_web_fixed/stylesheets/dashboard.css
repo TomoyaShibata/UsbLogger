@@ -1,0 +1,59 @@
+div.panel {
+	height: 100%;
+	width: 493px;
+	float: left;
+	border: 1px solid #e5e5e5;
+
+}
+
+div.panel:nth-child(even) {
+	margin-right: 10px;
+}
+
+div#info_panel div.panel h4 {
+	/*common.cssで定義されているスタイル
+	をリセットして改めてボーダーを定義する*/
+	margin: 0;
+	border: 0;
+	border-bottom: 1px solid #e5e5e5;
+	color: #777;
+}
+
+div#info_panel div.panel p {
+	padding: 10px;
+}
+
+div#info_panel div#info_basic table {
+	margin: 0 10px 10px 10px;
+	width: 473px;
+	font-size: 14px;
+}
+
+div#info_panel div#info_basic tr:nth-child(1) {
+	color: #cc3333;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+div#info_panel div#info_basic td {
+	border-top   : 1px solid #fff;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+div#info_panel div#info_basic tr:first-child td {
+	border-top: 0;
+}
+
+div#info_panel div#info_basic td {
+	padding: 10px 0 3px 0;
+}
+
+div#info_panel div#info_basic tr td:nth-child(2) {
+	padding-right: 5px;
+	text-align: right;
+}
+
+div.long_panel {
+	width: 998px;
+	margin: 10px 0;
+}

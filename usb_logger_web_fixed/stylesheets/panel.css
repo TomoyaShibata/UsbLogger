@@ -1,0 +1,78 @@
+div.panel {
+	height: 100%;
+	width: 493px;
+	margin-bottom: 10px;
+	float: left;
+	border: 1px solid #e5e5e5;
+	background: #f5f5f5;
+}
+
+/*通常パネルの右列は左に余白を取る*/
+div.panel:nth-child(even) {
+	margin-right: 10px;
+}
+
+/*ロングパネルのスタイル*/
+div.long_panel {
+	width: 998px;
+}
+
+section#main div.panel h4 {
+	/*common.cssで定義されているスタイル
+	をリセットして改めてボーダーを定義する*/
+	margin: 0;
+	border: 1px solid #fff;
+}
+
+section#main div.panel h4 img {
+	vertical-align: -5px;
+	margin-right: 5px;n
+}
+
+div.panel p {
+	padding: 10px;
+}
+
+/*-------------------------------------
+ ログ統計情報
+-------------------------------------*/
+div#panel_statistics table {
+	margin: 0 10px 10px 10px;
+	width: 473px;
+	font-size: 14px;
+}
+
+div#panel_statistics tr:nth-child(1) {
+	color: #cc3333;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+div#panel_statistics tr td:nth-child(2) {
+	padding-right: 5px;
+	text-align: right;
+}
+
+div#panel_statistics tr:first-child td {
+	border-top: 0 !important;
+}
+
+div#panel_statistics tr:last-child td {
+	border-bottom: 0 !important;
+}
+
+div#panel_statistics td {
+	padding: 10px 0 5px 0;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+div#panel_whitelist_status {
+	height: 143px;
+}
+
+div#panel_whitelist_status p.panel_footer_link {
+	font-size: 14px;
+	margin-top: 30px;
+	text-align: right;
+}
