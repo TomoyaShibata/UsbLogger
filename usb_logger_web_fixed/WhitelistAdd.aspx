@@ -26,16 +26,16 @@
             <section id="main">
                 <asp:Literal ID="ltrError" runat="server"></asp:Literal>
                 <asp:Literal ID="ltrDebug" runat="server"></asp:Literal>
-				<h4>ホワイトリスト新規登録</h4>
 				<div id="panel_whitelist_add" class="panel long_panel">
-					<table>
+					<h4>ホワイトリスト新規登録</h4>
+					<table cellspacing="0" cellpadding="0">
 						<tr>
-							<td>USBメモリ ベンダー名</td>
-							<td><asp:Literal ID="ltrUsbVendorName" runat="server" Text="接続されていません"></asp:Literal></td>
+							<td>USBメモリ ベンダ名</td>
+							<td><asp:Literal ID="ltrUsbVendorName" runat="server" Text="USBメモリが接続されていません"></asp:Literal></td>
 						</tr>
 						<tr>
 							<td>USBメモリ シリアル番号</td>
-							<td><asp:Literal ID="ltrUsbSerialNo" runat="server" Text="接続されていません"></asp:Literal></td>
+							<td><asp:Literal ID="ltrUsbSerialNo" runat="server" Text="USBメモリが接続されていません"></asp:Literal></td>
 						</tr>
 						<tr>
 							<td>ホワイトリスト登録者</td>
@@ -46,6 +46,7 @@
 							<td><asp:TextBox ID="txtUsbOwnerName" runat="server"></asp:TextBox></td>
 						</tr>
 					</table>
+					<h4><asp:Button ID="linkAddWhitelist" runat="server" CssClass="button" Text="新規登録を実行"></asp:Button></h4>
 				</div>
             </section>
 			<section style="clear: both"></section>

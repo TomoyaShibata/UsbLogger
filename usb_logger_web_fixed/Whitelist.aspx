@@ -5,7 +5,8 @@
 <head id="Head1" runat="server">
     <link rel="icon" href="images/usb-stick.ico">
     <link rel="Stylesheet" type="text/css" href="stylesheets/common.css">
-    <link rel="Stylesheet" type="text/css" href="stylesheets/whitelist.css">
+	<link rel="Stylesheet" type="text/css" href="stylesheets/gh-buttons.css">
+	<link rel="Stylesheet" type="text/css" href="stylesheets/panel.css">
     <title>USB LOGGER</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
             <header>
                 <div id="header_wrapper">
                     <ul>
-                        <li class="logo"><a href="Main.aspx">USB LOGGER</a></li>
+                        <li class="logo"><a href="Dashboard.aspx">USB LOGGER</a></li>
                         <li><a href="Dashboard.aspx">ダッシュボード</a></li>
                         <li><a href="AllLog.aspx">全てのログ</a></li>
 						<li><a href="Whitelist.aspx">ホワイトリスト</a></li>
@@ -26,7 +27,7 @@
                 <div id="info_panel">
                     <asp:Literal ID="ltrError" runat="server"></asp:Literal>
                     <asp:Literal ID="ltrDebug" runat="server"></asp:Literal>
-					<div id="info_basic" class="panel">
+					<div id="info_basic" class="panel long_panel">
 						<h4>ホワイトリスト</h4>
 						<table cellpadding="0" cellspacing="0">
 							<tr>
@@ -35,8 +36,11 @@
 							</tr>
 						</table>
 					</div>
-					<div id="whilte_list" class="panel">
-						<h4>ホワイトリストに登録されているUSBメモリ情報</h4>
+					<div id="whilte_list" class="panel long_panel">
+						<h4>
+							ホワイトリストに登録されているUSBメモリ情報
+							<a href="WhitelistAddAttention.aspx" class="button" style="margin-left: 510px;">ホワイトリスト新規登録</a>
+						</h4>
 					</div>
                 </div>
             </section>

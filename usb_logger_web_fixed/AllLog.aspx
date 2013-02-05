@@ -5,6 +5,7 @@
 <head id="Head1" runat="server">
     <link rel="icon" href="images/usb-stick.ico">
     <link rel="Stylesheet" type="text/css" href="stylesheets/common.css">
+	<link rel="Stylesheet" type="text/css" href="stylesheets/panel.css">
     <link rel="Stylesheet" type="text/css" href="stylesheets/main.css">
     <title>USB LOGGER</title>
 </head>
@@ -17,17 +18,19 @@
                         <li class="logo"><a href="Dashboard.aspx">USB LOGGER</a></li>
                         <li><a href="Dashboard.aspx">ダッシュボード</a></li>
                         <li><a href="AllLog.aspx">全てのログ</a></li>
-						<li><a href="Whitelist.aspx">ホワイトリスト機能</a></li>
+						<li><a href="Whitelist.aspx">ホワイトリスト</a></li>
                         <li><a href="Login.aspx?request=logout">ログアウト</a></li>
                     </ul>
                 </div>
             </header>   
             <section id="main">
-                <div id="log_list">
-                    <h4>USBメモリ 接続ログ</h4>
+                <div id="info_panel">
+					<div class="panel long_panel">
+						<h4>全てのログ</h4>
+					</div>
                     <asp:Literal ID="ltrError" runat="server"></asp:Literal>
                     <asp:Literal ID="ltrDebug" runat="server"></asp:Literal>
-                    <asp:GridView ID="gridUsbLog" runat="server" BorderStyle="None" BorderWidth="0px" GridLines="None"></asp:GridView>
+                    <asp:GridView ID="gridUsbLog" runat="server" GridLines="None"></asp:GridView>
                 </div>
             </section>
             <footer>

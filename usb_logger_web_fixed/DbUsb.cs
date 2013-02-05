@@ -14,7 +14,7 @@ namespace usb_logger_web_fixed {
         // 全件取得する
         public DataTable getAllUsbLog() {
             MySqlCommand commAllSelect = new MySqlCommand(@"SELECT
-                                                            alert_mark      AS '警告状態',
+                                                            alert_mark      AS '警告',
                                                             log_time        AS '日時',
                                                             pc_name         AS 'PC名',
                                                             pc_user_name    AS 'PCユーザ',
@@ -45,7 +45,7 @@ namespace usb_logger_web_fixed {
             DataTable dtAlertUsbLog = new DataTable();
 
             MySqlCommand commGetAlertUsbLog = new MySqlCommand(@"
-                SELECT  alert_mark      AS '警告状態',
+                SELECT  alert_mark      AS '警告',
                         log_time        AS '日時',
                         pc_name         AS 'PC名',
                         pc_user_name    AS 'PCユーザ',
@@ -84,7 +84,26 @@ namespace usb_logger_web_fixed {
             return dtAlertUsbLog;
         }
 
-        // 件数を取得
+        // 未対応の警告ログ件数を取得
+        public int getCountsAlertUsbLog() {
+            int countsAlertUsbLog = 0;
+            MySqlCommand commCountAlertUsbLog = new MySqlCommand("SELECT COUNT(log_id) FROM t_log WHERE alert_mark = 1", db.conn);
+
+            try {
+                db.conn.Open();
+                countsAlertUsbLog = Convert.ToInt32(commCountAlertUsbLog.ExecuteScalar());
+                db.conn.Close();
+            } catch (MySqlException e) {
+                db.exceptionMsg = "エラーコード：" + e.ErrorCode + "<br>エラー内容：" + e.Message + "<br>エラー原因：" + e.Source;
+                Debug.Listeners.Add(new TextWriterTraceListener(Console.Out));
+                Debug.WriteLine(db.exceptionMsg);
+                Debug.WriteLine(db.debugSql);
+            }
+
+            return countsAlertUsbLog;
+        }
+
+        // 全ての件数を取得
         public int[] countUsbLog() {
             int[] arrCount = new int[2];
 

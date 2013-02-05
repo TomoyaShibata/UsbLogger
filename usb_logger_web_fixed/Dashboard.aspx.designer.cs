@@ -49,13 +49,13 @@ namespace usb_logger_web_fixed {
         protected global::System.Web.UI.WebControls.Literal ltrDebug;
         
         /// <summary>
-        /// ltrTodayAlertLogCount コントロール。
+        /// ltrCountsAlertUsbLog コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltrTodayAlertLogCount;
+        protected global::System.Web.UI.WebControls.Literal ltrCountsAlertUsbLog;
         
         /// <summary>
         /// ltrTodayLogCount コントロール。

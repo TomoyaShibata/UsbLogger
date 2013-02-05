@@ -14,6 +14,12 @@ namespace usb_logger_web_fixed {
     public partial class AllLog : System.Web.UI.Page {
         // ページロード
         protected void Page_Load(object sender,EventArgs e) {
+            // ログインチェック
+            if (Session.Count.Equals(0)) {
+                Session.RemoveAll();
+                Response.Redirect("Login.aspx");
+            }
+
             //USB接続ログからの全件取得処理を呼び出し
             DbUsb dbUsb = new DbUsb();
             gridUsbLog.DataSource = dbUsb.getAllUsbLog();

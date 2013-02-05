@@ -10,6 +10,7 @@ namespace usb_logger_web_fixed {
         protected void Page_Load(object sender, EventArgs e) {
             if (Request.QueryString["request"] == "logout") {
                 Session.RemoveAll();
+                Response.Redirect("Login.aspx");
             }
         }
 
@@ -22,7 +23,7 @@ namespace usb_logger_web_fixed {
                 Session.Add("loginState", true);
                 Session.Add("userId"    , txtUserId);
 
-                Response.Redirect("Main.aspx");
+                Response.Redirect("Dashboard.aspx");
             } else {
                 ltrError.Text += errorMsg;
             }

@@ -1,20 +1,19 @@
-div#log_list {
-	margin: 10px auto;
-}
-
-
 table#gridUsbLog {
-	width: 1000px;
-	border: 5px solid red;
+	width: 998px;
+	border: 1px solid #e5e5e5;
 	font-size: 14px;
 }
 
 table#gridUsbLog tr {
-	height: 25px;
+	height: 30px;
 }
 
 table#gridUsbLog tr:nth-child(2n+1) {
 	background: #f5f5f5;
+}
+
+table#gridUsbLog tr:first-child th {
+	font-size: 15px;
 }
 
 table#gridUsbLog th,
@@ -22,30 +21,5 @@ table#gridUsbLog td {
 	padding: 5px;
 	text-align: left;
 	border-top: 1px solid #e5e5e5;
-}
-
-table#gridUsbLog td {
-	font-size: 13px;
-	border-top: 1px solid #e5e5e5;
-}
-
-table#gridUsbLog td:nth-child(1) {
-	width: 120px;
-}
-
-table#gridUsbLog td:nth-child(2),
-table#gridUsbLog td:nth-child(3) {
-	width: 100px;
-}
-
-table#gridUsbLog td:nth-child(4) {
-	width: 110px;
-}
-
-table#gridUsbLog td:nth-child(5) {
-	width: 150px;
-}
-
-table#gridUsbLog td:nth-child(7) {
-	width: 50px;
+	border-bottom: 1px solid #e5e5e5;
 }
