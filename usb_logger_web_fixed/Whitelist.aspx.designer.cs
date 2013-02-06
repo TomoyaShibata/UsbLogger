@@ -56,5 +56,14 @@ namespace usb_logger_web_fixed {
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltrStatusWhitelist;
+        
+        /// <summary>
+        /// gridWhitelist コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridWhitelist;
     }
 }

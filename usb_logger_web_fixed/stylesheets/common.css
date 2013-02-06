@@ -1,4 +1,4 @@
-html {
+body {
 	height: 100%;
 }
 
@@ -109,7 +109,7 @@ header div#header_wrapper li:nth-child(n + 2) a:active {
  main
 -------------------------------------*/
 section#main {
-	min-height: 100%;
+	height: auto;
 	width: 1000px;
 	margin: 43px auto;
 }
@@ -126,15 +126,27 @@ section#main h4 {
  footer
 -------------------------------------*/
 footer {
+	height: 70px;
 	width: 100%;
-	position: absolute;
-	bottom: 0;
-	height: 30px;
 	margin-top: 10px;
-	padding-top: 10px;
+	padding-top: 20px;
 	border-top: 1px solid #e5e5e5;
 	background: #f5f5f5;
 	color: #777;
 	text-align: center;
 	font-size: 14px;
+}
+
+footer ul {
+	list-style: none;
+}
+
+footer ul li {
+	display: inline;
+	padding: 0 10px;
+	border-left: solid 1px #777;
+}
+
+footer ul li:last-child{
+	border-right: solid 1px #777;
 }

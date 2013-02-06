@@ -110,3 +110,31 @@ div#panel_whitelist_add table tr td {
 div#panel_whitelist_add table tr td:first-child {
 	width: 200px;
 }
+
+/*-------------------------------------
+ ホワイトリストに登録されているUSBメモリ情報
+-------------------------------------*/
+table#gridWhitelist {
+	width: 998px;
+	font-size: 14px;
+	background: #fff;
+}
+
+table#gridWhitelist tr {
+	height: 25px;
+}
+
+table#gridWhitelist tr:nth-child(2n+1) {
+	background: #f5f5f5;
+}
+
+table#gridWhitelist th,
+table#gridWhitelist td {
+	padding: 5px;
+	text-align: left;
+	border-top: 1px solid #e5e5e5;
+}
+
+table#gridWhitelist tr:nth-child(1) th {
+	border: none;
+}

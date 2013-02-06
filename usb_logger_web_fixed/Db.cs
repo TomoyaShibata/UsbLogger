@@ -21,26 +21,6 @@ namespace usb_logger_web_fixed {
                                                             user id  = root;
                                                             pwd      = ;");
 
-
-
-        // USB接続ログテーブルへの検索結果を取得
-        public void searchUsbLog() {
-            MySqlCommand mySearchSelect = new MySqlCommand("SELECT * FROM t_log",conn);
-
-            // 検索結果取得処理を実行
-            try {
-                conn.Open();
-
-                MySqlDataReader myReader = mySearchSelect.ExecuteReader();
-                while (myReader.Read()) {
-                }
-            } catch (MySqlException e) {
-                exceptionMsg = "エラーコード：" + e.ErrorCode + "<br>エラー内容：" + e.Message + "<br>エラー原因：" + e.Source;
-            } finally {
-                conn.Close();
-            }
-        }
-
         // ユーザテーブルを参照し、ログイン処理を行う
         public string userLogin(string userId,string userPass) {
             string hashUserPass = hashingUserPass(userPass);

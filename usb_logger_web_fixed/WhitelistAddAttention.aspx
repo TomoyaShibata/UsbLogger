@@ -7,6 +7,7 @@
     <link rel="Stylesheet" type="text/css" href="stylesheets/common.css">
 	<link rel="Stylesheet" type="text/css" href="stylesheets/gh-buttons.css">
     <link rel="Stylesheet" type="text/css" href="stylesheets/panel.css">
+	<script type="text/javascript" src="../js/footerFixed.js"></script>
     <title>USB LOGGER</title>
 </head>
 <body>
@@ -32,13 +33,18 @@
 				<strong style="color: #cc3333;">登録するUSBメモリをコンピュータに接続してください。<br>
 				その他のリムーバブルなUSB機器は必ず取り外して下さい。正常な登録処理が行われない恐れがあります。</strong><br>
 				準備が完了致しましたら、下記ボタンより、次の画面へ移動してください。</p>
-				<p style="margin-top: 50px;"><a href="WhitelistAdd.aspx" class="button">ホワイトリスト新規登録を開始</a></p>
+				<p style="margin-top: 50px; text-align: right;"><a href="WhitelistAdd.aspx" class="button">ホワイトリスト新規登録を開始</a></p>
 				</div>
             </section>
 			<section style="clear: both"></section>
-            <footer>
-                <p>Designed and built by <a href="https://www.facebook.com/shibalab" target="_blank">Ryou.Kanazawa</a></p>
-            </footer>
+            <footer id="footer">
+                <p>USB LOGGER Copyright ©2012-2013 by <a href="https://www.facebook.com/shibalab" target="_blank">Ryou.Kanazawa</a> All rights reserved.</p>
+				<ul>
+					<li><a href="#">USB LOGGERについて</a></li>
+					<li><a href="#">ご要望・不具合報告</a></li>
+					<li><a href="#">お問い合わせ</a></li>
+				</ul>            
+			</footer>
         </div>
     </form>
 </body>

@@ -31,12 +31,17 @@ table#gridAlertUsbLog tr:nth-child(1) th {
 }
 
 table#gridAlertUsbLog th:nth-child(2) {
-	width: 60px;
+	width: 30px;
 	text-align: center;
 }
 
 table#gridAlertUsbLog th:nth-child(3) {
 	width: 140px;
+}
+
+table#gridAlertUsbLog tr td:nth-child(1) {
+	text-align: center;
+	padding: 0;
 }
 
 table#gridAlertUsbLog tr td:nth-child(2) {

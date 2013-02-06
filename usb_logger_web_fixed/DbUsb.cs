@@ -30,11 +30,11 @@ namespace usb_logger_web_fixed {
             try {
                 db.conn.Open();
                 adapterAllSelect.Fill(dtAllSelect);
+                db.conn.Close();
             } catch (MySqlException e) {
                 db.exceptionMsg = "エラーコード：" + e.ErrorCode + "<br>エラー内容：" + e.Message + "<br>エラー原因：" + e.Source;
-            } finally {
-                db.conn.Close();
             }
+
             return dtAllSelect;
         }
 

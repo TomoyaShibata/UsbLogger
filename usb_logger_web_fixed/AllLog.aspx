@@ -7,6 +7,7 @@
     <link rel="Stylesheet" type="text/css" href="stylesheets/common.css">
 	<link rel="Stylesheet" type="text/css" href="stylesheets/panel.css">
     <link rel="Stylesheet" type="text/css" href="stylesheets/main.css">
+	<script type="text/javascript" src="../js/footerFixed.js"></script>
     <title>USB LOGGER</title>
 </head>
 <body>
@@ -33,9 +34,15 @@
                     <asp:GridView ID="gridUsbLog" runat="server" GridLines="None"></asp:GridView>
                 </div>
             </section>
-            <footer>
-                <p>Designed and built by <a href="https://www.facebook.com/shibalab" target="_blank">Ryou.Kanazawa</a></p>
-            </footer>
+			<section style="clear: both"></section>
+            <footer id="footer">
+                <p>USB LOGGER Copyright ©2012-2013 by <a href="https://www.facebook.com/shibalab" target="_blank">Ryou.Kanazawa</a> All rights reserved.</p>
+				<ul>
+					<li><a href="#">USB LOGGERについて</a></li>
+					<li><a href="#">ご要望・不具合報告</a></li>
+					<li><a href="#">お問い合わせ</a></li>
+				</ul>            
+			</footer>
         </div>
     </form>
 </body>

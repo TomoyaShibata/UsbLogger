@@ -5,8 +5,10 @@
 <head id="Head1" runat="server">
     <link rel="icon" href="images/usb-stick.ico">
     <link rel="Stylesheet" type="text/css" href="stylesheets/common.css">
+	<link rel="Stylesheet" type="text/css" href="stylesheets/gh-buttons.css">
 	<link rel="Stylesheet" type="text/css" href="stylesheets/panel.css">
 	<link rel="Stylesheet" type="text/css" href="stylesheets/loglist.css">
+	<script type="text/javascript" src="../js/footerFixed.js"></script>
     <title>USB LOGGER</title>
 </head>
 <body>
@@ -50,7 +52,7 @@
 					<div id="panel_whitelist_status" class="panel">
 						<h4>ホワイトリスト機能</h4>
 						<p>ホワイトリスト機能は現在、<span style="color: #cc3333;"><asp:Literal ID="ltrStatusWhitelist" runat="server"></asp:Literal></span>です。</p>
-						<p class="panel_footer_link"><a href="Whitelist.aspx">ホワイトリスト設定画面へ</a></p>
+						<p style="text-align: right; margin-top: 20px;"><a href="Whitelist.aspx" class="button">ホワイトリスト設定画面へ</a></p>
 					</div>
 					<div id="alert_log" class="panel long_panel">
 						<h4>未対応の警告ログ</h4>
@@ -65,9 +67,14 @@
                 </div>
             </section>
 			<section style="clear: both"></section>
-            <footer>
-                <p>Designed and built by nd built by <a href="https://www.facebook.com/shibalab" target="_blank">Ryou.Kanazawa</a></p>
-            </footer>
+            <footer id="footer">
+                <p>USB LOGGER Copyright ©2012-2013 by <a href="https://www.facebook.com/shibalab" target="_blank">Ryou.Kanazawa</a> All rights reserved.</p>
+				<ul>
+					<li><a href="#">USB LOGGERについて</a></li>
+					<li><a href="#">ご要望・不具合報告</a></li>
+					<li><a href="#">お問い合わせ</a></li>
+				</ul>            
+			</footer>
         </div>
     </form>
 </body>
