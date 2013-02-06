@@ -8,6 +8,7 @@ using System.Web.UI.WebControls;
 namespace usb_logger_web_fixed {
     public partial class Login : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
+            // ログアウトリクエストをチェック
             if (Request.QueryString["request"] == "logout") {
                 Session.RemoveAll();
                 Response.Redirect("Login.aspx");
@@ -20,8 +21,8 @@ namespace usb_logger_web_fixed {
 
             // エラーの有無を確認し、ログイン処理を行う
             if (errorMsg == null) {
-                Session.Add("loginState", true);
-                Session.Add("userId"    , txtUserId);
+                Session["loginState"] = true;
+                Session["userId"]     = txtUserId.Text;
 
                 Response.Redirect("Dashboard.aspx");
             } else {

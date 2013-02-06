@@ -31,11 +31,11 @@
 					<table cellspacing="0" cellpadding="0">
 						<tr>
 							<td>USBメモリ ベンダ名</td>
-							<td><asp:Literal ID="ltrUsbVendorName" runat="server" Text="USBメモリが接続されていません"></asp:Literal></td>
+							<td><asp:Literal ID="ltrUsbVendorName" runat="server" Text="USBメモリが接続されていません。正しくUSBメモリが接続されているか、確認してください。"></asp:Literal></td>
 						</tr>
 						<tr>
 							<td>USBメモリ シリアル番号</td>
-							<td><asp:Literal ID="ltrUsbSerialNo" runat="server" Text="USBメモリが接続されていません"></asp:Literal></td>
+							<td><asp:Literal ID="ltrUsbSerialNo" runat="server" Text="USBメモリが接続されていません。正しくUSBメモリが接続されているか、確認してください。"></asp:Literal></td>
 						</tr>
 						<tr>
 							<td>ホワイトリスト登録者</td>

@@ -10,20 +10,30 @@ using MySql.Data.MySqlClient;
 namespace usb_logger_web_fixed {
     public partial class Whitelist_Add : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
+            // ログインチェック
+            if (Session.Count.Equals(0)) {
+                Session.RemoveAll();
+                Response.Redirect("Login.aspx");
+            }
+
             Db db = new Db();
             MySqlCommand commGetUserName = new MySqlCommand(@"
                 SELECT user_name
                 FROM   t_user
                 WHERE  user_id = '@user_id'
-            ");
-            commGetUserName.Parameters.AddWithValue("@user_id", Session["userId"]);
+                ",
+                db.conn
+            );
+
+            commGetUserName.CommandText = commGetUserName.CommandText.Replace("@user_id", (string)Session["userId"]);
 
             try {
                 db.conn.Open();
                 MySqlDataReader read = commGetUserName.ExecuteReader();
                 while (read.Read()) {
-                    ltrRegistrantName.Text = read["user_name"].ToString();
+                    ltrRegistrantName.Text = (string)read["user_name"];
                 }
+                read.Close();
                 db.conn.Close();
             } catch (MySqlException mysqlE) {
             }
