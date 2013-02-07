@@ -17,7 +17,7 @@
             <header>
                 <div id="header_wrapper">
                     <ul>
-                        <li class="logo"><a href="Main.aspx">USB LOGGER</a></li>
+                        <li class="logo"><a href="Dashboard.aspx">USB LOGGER</a></li>
                         <li><a href="Dashboard.aspx">ダッシュボード</a></li>
                         <li><a href="AllLog.aspx">全てのログ</a></li>
 						<li><a href="Whitelist.aspx">ホワイトリスト</a></li>
